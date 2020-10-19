@@ -105,8 +105,8 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:Firefox "
-set $ws2 "2:Terminals"
+set $ws1 "1:Firefox "
+set $ws2 "2:"
 set $ws3 "3:"
 set $ws4 "4"
 set $ws5 "5"
@@ -182,10 +182,12 @@ bar {
 #Wallpaper
 exec_always feh --bg-scale /home/ronak/Pictures/Wallpapers/wall.jpg
 
+#Unmute microphone on startup 
+exec amixer set Capture cap
+
 #Start Up Applications
 exec redshift -t 4500:4500
 exec prime-run firefox
-exec amixer set Capture cap
 
 #Work Space Assignment
 assign [class="firefox"] $ws1 
